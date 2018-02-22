@@ -14,16 +14,16 @@ library(data.table)
 # Carregando os dados (Usando um timer para comparar o tempo de carregamento com diferentes funções)
 
 # Usando read.csv2()
-system.time(df_teste1 <- read.csv2("TemperaturasGlobais.csv"))
+system.time(df_teste1 <- read.csv2("datasets/TemperaturasGlobais.csv"))
 
 
 # Usando read.table()
-system.time(df_teste2 <- read.table("TemperaturasGlobais.csv"))
+system.time(df_teste2 <- read.table("datasets/TemperaturasGlobais.csv"))
 
 
 # Usando fread()
 ?fread
-system.time(df <- fread("TemperaturasGlobais.csv"))
+system.time(df <- fread("datasets/TemperaturasGlobais.csv"))
 
 
 # Criando subsets dos dados carregados
@@ -90,5 +90,3 @@ p_recf <- ggplot(recf, aes(x = (Month), y = AverageTemperature, color = as.facto
 p_plm
 p_crt
 p_recf
-
-
