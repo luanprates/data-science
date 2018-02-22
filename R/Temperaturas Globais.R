@@ -14,16 +14,16 @@ library(data.table)
 # Carregando os dados (Usando um timer para comparar o tempo de carregamento com diferentes funções)
 
 # Usando read.csv2()
-system.time(df_teste1 <- read.csv2("datasets/TemperaturasGlobais.csv"))
+system.time(df_teste1 <- read.csv2("datasets/temperaturas.csv"))
 
 
 # Usando read.table()
-system.time(df_teste2 <- read.table("datasets/TemperaturasGlobais.csv"))
+system.time(df_teste2 <- read.table("datasets/temperaturas.csv"))
 
 
 # Usando fread()
 ?fread
-system.time(df <- fread("datasets/TemperaturasGlobais.csv"))
+system.time(df <- fread("datasets/temperaturas.csv"))
 
 
 # Criando subsets dos dados carregados
