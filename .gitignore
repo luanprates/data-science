@@ -1,2 +1,4 @@
-.Rhistory
-.csv
+*.Rhistory
+*.csv
+*.txt
+*.gz
